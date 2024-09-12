@@ -7,7 +7,7 @@ WORKDIR /app
 COPY [".", "/app"]
 
 RUN set -x \
-    && dotnet publish src/${PROJ}.csproj -c Release -o /tmp/build
+    && dotnet publish src/${PROJ}/${PROJ}.csproj -c Release -o /tmp/build
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0.306-jammy-amd64
 
